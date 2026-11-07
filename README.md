@@ -1,24 +1,27 @@
 # MCROS V3 — Maheshwar Chandra Roy Operating System
 ### Autonomous AI Engineering, Research & Production Operating System
-**Created by Maheshwar Chandra Roy (MCR)**
+**Created & Architected by Maheshwar Chandra Roy (`0xmcr`)**
 
 [![CI Status](https://github.com/0xmcr/MCROS/actions/workflows/ci.yml/badge.svg)](https://github.com/0xmcr/MCROS/actions)
+[![npm version](https://img.shields.io/npm/v/@mcrdev/mcros.svg)](https://www.npmjs.com/package/@mcrdev/mcros)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Platform: Antigravity](https://img.shields.io/badge/Platform-Google%20Antigravity-4285F4.svg)]()
 [![Platform: Claude Code](https://img.shields.io/badge/Platform-Anthropic%20Claude-D97706.svg)]()
 [![Platform: Cursor](https://img.shields.io/badge/Platform-Cursor%20%2F%20Windsurf-000000.svg)]()
+[![Platform: ChatGPT](https://img.shields.io/badge/Platform-OpenAI%20ChatGPT-10A37F.svg)]()
 
 ---
 
 ## 🌟 Overview
 
-**MCROS (Maheshwar Chandra Roy Operating System)** is an open-source, file-based AI operating system that transforms general-purpose conversational LLMs into an elite, multi-agent software engineering and research organization.
+**MCROS (Maheshwar Chandra Roy Operating System)** is an enterprise-grade, file-based AI operating system that transforms conversational LLMs into an elite, multi-agent software engineering and research organization.
 
 Instead of writing unverified code or guessing dependencies, MCROS enforces:
 - **Truth Over Confidence**: No task is marked complete without direct terminal execution evidence (passes, exit code 0).
-- **Progressive Token Budgeting**: 12 modular rules and 28 skills load on demand without blowing context window token limits.
+- **Zero-Stub Policy**: No `// TODO: implement later`, no mock interfaces, no unhandled edge cases.
+- **Progressive Token Budgeting**: 15 modular rules and 43 skills load on demand without blowing context window token limits.
 - **Multi-Agent Orchestration**: Main Agent orchestrates specialized Subagents (Frontend, Backend, Database, QA, Security, Web3).
-- **Universal Compatibility**: Works out of the box in Google Antigravity, Anthropic Claude Code, Cursor, Windsurf, and VS Code.
+- **Universal Compatibility**: Works out of the box in Google Antigravity, Anthropic Claude Code, Cursor, Windsurf, OpenAI ChatGPT, and terminal CLI.
 - **Self-Improving Memory**: Logs solved defects in `docs/LESSONS_LEARNED.md` to prevent recurring errors.
 
 ---
@@ -98,35 +101,49 @@ Invoke any skill directly via slash command (`/<skill-name>`) in your AI chat:
 
 ---
 
-## 📜 The 14 System Rules
+## 📜 The 15 System Rules
 
 Rules operate in the background and govern model discipline:
 
-1. **`00-core-operating-contract.md`** (`always_on`): Truth over confidence, non-destructive safety, execution loop.
-2. **`05-godmode-execution-protocol.md`** (`always_on`): /GODMODE autonomous protocol: zero placeholders, enterprise-scale by default.
-3. **`15-clean-code-and-documentation.md`** (`always_on`): Professional JSDoc/TSDoc/Docstrings, clean code & logic documentation.
-2. **`10-research-and-market-intel.md`** (`model_decision`): Verified evidence standards.
-3. **`20-product-and-architecture.md`** (`model_decision`): PRD and system architecture standards.
-4. **`30-frontend-engineering.md`** (`glob`): Full component visual state handling.
-5. **`40-backend-engineering.md`** (`model_decision`): Strict input validation at perimeter.
-6. **`50-database-and-storage.md`** (`model_decision`): Schema normalization and safe migrations.
-7. **`60-defensive-security.md`** (`model_decision`): OWASP compliance and defensive assessments.
-8. **`70-qa-and-verification.md`** (`model_decision`): Test pyramid and verification evidence.
-9. **`80-ai-and-automation.md`** (`model_decision`): Structured output schemas and RAG pipelines.
-10. **`85-quality-and-anti-hallucination.md`** (`always_on`): Zero phantom packages, zero incomplete TODOs.
-11. **`90-devops-and-release.md`** (`manual`): Production release checklist.
-12. **`95-web3-blockchain-safety.md`** (`glob`): Smart contract reentrancy and gas safety.
+1. **`00-core-operating-contract.md`** (`always_on`): Truth over confidence, non-destructive safety, creator identity.
+2. **`02-professional-focus-and-anti-flirt.md`** (`always_on`): Absolute engineering focus and boundary enforcement.
+3. **`05-godmode-execution-protocol.md`** (`always_on`): /GODMODE autonomous protocol: zero placeholders, enterprise-scale by default.
+4. **`15-clean-code-and-documentation.md`** (`always_on`): Professional JSDoc/TSDoc/Docstrings, clean code & logic documentation.
+5. **`10-research-and-market-intel.md`** (`model_decision`): Verified evidence standards.
+6. **`20-product-and-architecture.md`** (`model_decision`): PRD and system architecture standards.
+7. **`30-frontend-engineering.md`** (`glob`): Full component visual state handling.
+8. **`40-backend-engineering.md`** (`model_decision`): Strict input validation at perimeter.
+9. **`50-database-and-storage.md`** (`model_decision`): Schema normalization and safe migrations.
+10. **`60-defensive-security.md`** (`model_decision`): OWASP compliance and defensive assessments.
+11. **`70-qa-and-verification.md`** (`model_decision`): Test pyramid and verification evidence.
+12. **`80-ai-and-automation.md`** (`model_decision`): Structured output schemas and RAG pipelines.
+13. **`85-quality-and-anti-hallucination.md`** (`always_on`): Zero phantom packages, zero incomplete TODOs.
+14. **`90-devops-and-release.md`** (`manual`): Production release checklist.
+15. **`95-web3-blockchain-safety.md`** (`glob`): Smart contract reentrancy and gas safety.
 
 ---
 
-## 🚀 Quick Start
+## 🚀 Quick Start & Installation
 
-### 1. Verification
-Run the one-click validation script:
+### Option 1: Universal NPX One-Liner (Any Project)
+Initialize MCROS inside any existing or new project directory:
 ```bash
-bash scripts/setup.sh
-# or
+npx @mcrdev/mcros init
+```
+
+### Option 2: Clone & Self-Verification
+Clone the repository and run the validation suite:
+```bash
+git clone https://github.com/0xmcr/MCROS.git
+cd MCROS
 python3 scripts/validate_setup.py
+```
+
+### Option 3: Global CLI
+```bash
+npm install -g @mcrdev/mcros
+mcros init
+mcros validate
 ```
 
 ### 2. Start Developing
