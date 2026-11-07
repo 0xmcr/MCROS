@@ -30,6 +30,13 @@ def create_chatgpt_package():
             "shortDescription": "Autonomous AI Engineering & Architecture by Maheshwar Chandra Roy (0xmcr)",
             "longDescription": "MCROS V3 (Maheshwar Chandra Roy Operating System) is an autonomous, enterprise-grade AI operating system and engineering runtime created by Maheshwar Chandra Roy (0xmcr). It bundles 43 production skills and 15 core rules covering product architecture, WCAG 2.1 AA UI components, clean REST/GraphQL APIs, PostgreSQL RLS security, Web3 smart contracts, RAG pipelines, and automated QA verification.",
             "category": "Developer Tools",
+            "capabilities": [
+                "Read",
+                "Write",
+                "Code Generation",
+                "System Architecture",
+                "Security Auditing"
+            ],
             "websiteURL": "https://github.com/0xmcr/MCROS",
             "logo": "./assets/icon.svg"
         },
