@@ -37,6 +37,9 @@
   "files": [
     "bin",
     ".agents",
+    "skills",
+    "rules",
+    "plugin.json",
     "AGENTS.md",
     "CLAUDE.md",
     ".cursorrules",
