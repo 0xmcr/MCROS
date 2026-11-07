@@ -50,7 +50,7 @@ flowchart TD
 
 ---
 
-## ⚡ The 34 Master Skills Catalog
+## ⚡ The 36 Master Skills Catalog
 
 Invoke any skill directly via slash command (`/<skill-name>`) in your AI chat:
 
@@ -83,6 +83,8 @@ Invoke any skill directly via slash command (`/<skill-name>`) in your AI chat:
 | | `mcr-secrets-guard` | `/mcr-secrets-guard` | Plaintext API key leak prevention & .env hygiene |
 | **AI Systems** | `mcr-rag-architect` | `/mcr-rag-architect` | Vector DBs, semantic chunking, hybrid search & RAG |
 | **Web3** | `mcr-web3-blockchain` | `/mcr-web3-blockchain` | Solidity smart contracts, ERC standards, Foundry fuzzing |
+| **Git & Cloud Hosting** | `mcr-cloud-hosting-domains` | `/mcr-cloud-hosting-domains` | Wholesale domain purchase, Cloudflare DNS/SSL, cloud hosting |
+| | `mcr-git-workflow-github` | `/mcr-git-workflow-github` | Git feature branches, atomic commits, remote push & GitHub PRs |
 | **DevOps & Cloud** | `mcr-devops-cloud` | `/mcr-devops-cloud` | Docker containerization, GitHub Actions CI/CD pipelines |
 | | `mcr-release-readiness` | `/mcr-release-readiness` | Production verification gate & rollback safety check |
 | | `mcr-tech-docs` | `/mcr-tech-docs` | OpenAPI/Swagger specs, developer guides & changelogs |
