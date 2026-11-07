@@ -1,0 +1,38 @@
+name: Publish to GitHub Packages
+
+on:
+  release:
+    types: [published]
+  workflow_dispatch:
+
+jobs:
+  publish-gpr:
+    name: Publish to GitHub Packages (npm)
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      packages: write
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v5
+
+      - name: Set up Node.js 22
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          registry-url: 'https://npm.pkg.github.com'
+          scope: '@0xmcr'
+
+      - name: Configure package.json for GitHub Packages Scope
+        run: |
+          node -e '
+            const pkg = require("./package.json");
+            pkg.name = "@0xmcr/mcros";
+            pkg.publishConfig = { registry: "https://npm.pkg.github.com" };
+            require("fs").writeFileSync("./package.json", JSON.stringify(pkg, null, 2) + "\n");
+          '
+
+      - name: Publish Package to GitHub Package Registry
+        run: npm publish
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
