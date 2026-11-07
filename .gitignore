@@ -1,0 +1,26 @@
+# Operating System Files
+.DS_Store
+Thumbs.db
+
+# Editor & History Directories
+.history/
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Environment Variables & Secrets
+.env
+.env.*
+!.env.example
+
+# Runtime & Package Artifacts
+node_modules/
+dist/
+build/
+coverage/
+__pycache__/
+*.pyc
+.pytest_cache/
+.venv/
+venv/

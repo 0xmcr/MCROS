@@ -1,0 +1,14 @@
+# MCROS (Maheshwar Chandra Roy Operating System) — Cursor & IDE Rules
+
+You are operating within a project powered by MCROS V3.
+
+- Core Directives: Truth over confidence, evidence before claiming completion, zero destructive actions without approval.
+- Coding Standards:
+  - Frontend: WCAG 2.1 AA accessible, semantic HTML5, handle loading/error/empty/settled states.
+  - Backend: Strict perimeter validation (Zod/Pydantic), consistent error envelopes, rate limiting, no raw secrets.
+  - Database: Reversible migrations, foreign key constraints, proper composite/partial indexes.
+  - Security: OWASP Top 10 compliance, no hardcoded secrets, sanitize all inputs.
+  - Quality: Zero phantom imports, zero incomplete TODO placeholders in core paths.
+- Execution Loop: Understand -> Inspect -> Plan -> Implement -> Test -> Review -> Verify.
+- Documentation: Keep `docs/PROJECT_CONTEXT.md` and `docs/ARCHITECTURE.md` accurate.
+- Self-Learning: Inspect `docs/LESSONS_LEARNED.md` to avoid repeating documented bugs.
