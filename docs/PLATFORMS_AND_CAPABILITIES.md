@@ -27,7 +27,7 @@ MCROS V3 provides native entrypoints and configuration adapters for every major 
 | **Anthropic Claude Code** | `CLAUDE.md` | Contextual system prompt integration, single-command initialization, test-first loop execution, autonomous bash tool usage. |
 | **Cursor & Windsurf IDE** | `.cursorrules` | IDE context rules, strict TypeScript typing guidelines, file-specific linting rules, zero-placeholder enforcement. |
 | **OpenAI / ChatGPT / Copilot** | `AGENTS.md`, `CLAUDE.md` | Universal markdown contract that can be loaded into system instructions or custom GPT knowledge base. |
-| **CLI / NPM Package** | `package.json`, `bin/mcros.js` | Installable in any directory via `npx mcros init` or globally via `npm i -g mcros`. Includes deterministic self-test `mcros validate`. |
+| **CLI / NPM Package** | `package.json`, `bin/mcros.js` | Installable in any directory via `npx @mcrdev/mcros init` or globally via `npm i -g @mcrdev/mcros`. Includes deterministic self-test `mcros validate`. |
 
 ---
 

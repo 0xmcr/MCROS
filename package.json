@@ -1,10 +1,13 @@
 {
-  "name": "mcros",
+  "name": "@mcrdev/mcros",
   "version": "3.2.0",
   "description": "MCROS (Maheshwar Chandra Roy Operating System) — Autonomous AI Engineering, Research & Production OS",
   "main": "bin/mcros.js",
   "bin": {
     "mcros": "bin/mcros.js"
+  },
+  "publishConfig": {
+    "access": "public"
   },
   "scripts": {
     "validate": "python3 scripts/validate_setup.py",
