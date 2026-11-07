@@ -50,7 +50,7 @@ flowchart TD
 
 ---
 
-## ⚡ The 28 Master Skills Catalog
+## ⚡ The 33 Master Skills Catalog
 
 Invoke any skill directly via slash command (`/<skill-name>`) in your AI chat:
 
@@ -66,10 +66,15 @@ Invoke any skill directly via slash command (`/<skill-name>`) in your AI chat:
 | | `mcr-market-research` | `/mcr-market-research` | Market research, competitive analysis & TAM/SAM/SOM |
 | **Frontend & UI** | `mcr-frontend-ui` | `/mcr-frontend-ui` | Accessible (WCAG AA) components, loading/error/empty states |
 | | `mcr-responsive-styling` | `/mcr-responsive-styling` | Tailwind CSS, dark mode theming, view transitions |
-| **Backend & APIs** | `mcr-backend-api` | `/mcr-backend-api` | Scalable REST/GraphQL/gRPC APIs & Zod/Pydantic validation |
+| **Backend & Architecture** | `mcr-backend-api` | `/mcr-backend-api` | Scalable REST/GraphQL/gRPC APIs & Zod/Pydantic validation |
+| | `mcr-backend-clean-architecture` | `/mcr-backend-clean-architecture` | Clean Architecture, DDD, Controller-Service-Repository patterns |
 | | `mcr-auth-security` | `/mcr-auth-security` | OAuth 2.0, JWT, sessions, RBAC/ABAC route protection |
 | **Database** | `mcr-database-architect` | `/mcr-database-architect` | 3NF relational modeling, composite indexes, query tuning |
 | | `mcr-db-migration` | `/mcr-db-migration` | Zero-downtime expand/contract migrations & rollbacks |
+| **UX & Branding** | `mcr-brand-logo-design` | `/mcr-brand-logo-design` | Vector SVG logos, favicons, app icons, color palettes |
+| | `mcr-ux-interaction-design` | `/mcr-ux-interaction-design` | Click flows, toast notification system, modals & feedback loops |
+| | `mcr-motion-animation` | `/mcr-motion-animation` | High-performance 60fps animations, Framer Motion, transitions |
+| **Cross-Platform** | `mcr-crossplatform-mobile-desktop` | `/mcr-crossplatform-mobile-desktop` | Android, iOS, Windows, macOS, Linux native/hybrid apps |
 | **QA & Debugging** | `mcr-test-automation` | `/mcr-test-automation` | Vitest, Playwright, Pytest automated testing suites |
 | | `mcr-debugger-fixer` | `/mcr-debugger-fixer` | Error stack trace analysis & surgical root-cause repair |
 | **Quality & Memory**| `mcr-quality-gatekeeper` | `/mcr-quality-gatekeeper` | Anti-hallucination filter & lessons learned learning loop |
