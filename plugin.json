@@ -1,9 +1,26 @@
 {
   "name": "mcros",
+  "displayName": "MCROS V3",
   "version": "3.2.2",
-  "description": "MCROS — Autonomous AI Engineering, Research & Production Operating System by Maheshwar Chandra Roy (MCR)",
-  "author": "Maheshwar Chandra Roy (MCR)",
+  "description": "Autonomous AI Engineering, Research & Production Operating System by Maheshwar Chandra Roy (0xmcr). Enterprise full-stack engineering, 43 production skills, and 15 core rules.",
+  "author": {
+    "name": "Maheshwar Chandra Roy (0xmcr)",
+    "url": "https://github.com/0xmcr"
+  },
   "homepage": "https://github.com/0xmcr/MCROS",
-  "icon": "assets/icon.svg",
+  "repository": "https://github.com/0xmcr/MCROS",
+  "logo": "assets/icon.svg",
+  "keywords": [
+    "mcros",
+    "ai-agent",
+    "autonomous-engineering",
+    "full-stack",
+    "system-architecture"
+  ],
+  "suggestedPrompts": [
+    "Design and scaffold a full-stack Next.js and FastAPI production app",
+    "Run security audit and scan codebase for OWASP vulnerabilities",
+    "Architect PostgreSQL database schema with Row-Level Security (RLS)"
+  ],
   "license": "MIT"
 }
