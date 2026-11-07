@@ -1,0 +1,45 @@
+{
+  "$schema": "https://json.schemastore.org/design-tokens.json",
+  "name": "MCR Brand Design Tokens",
+  "version": "3.0.0",
+  "colors": {
+    "brand": {
+      "primary": { "value": "#2563EB", "description": "Primary high-contrast electric blue" },
+      "secondary": { "value": "#7C3AED", "description": "Vibrant tech purple" },
+      "accent": { "value": "#38BDF8", "description": "Luminous sky cyan for highlights" }
+    },
+    "semantic": {
+      "success": { "value": "#10B981", "description": "Accessible emerald green" },
+      "warning": { "value": "#F59E0B", "description": "Warm amber warning" },
+      "error": { "value": "#EF4444", "description": "High-visibility crimson red" },
+      "info": { "value": "#3B82F6", "description": "System informational blue" }
+    },
+    "neutral": {
+      "dark": {
+        "background": "#0F172A",
+        "surface": "#1E293B",
+        "border": "#334155",
+        "text": "#F8FAFC"
+      },
+      "light": {
+        "background": "#FFFFFF",
+        "surface": "#F8FAFC",
+        "border": "#E2E8F0",
+        "text": "#0F172A"
+      }
+    }
+  },
+  "typography": {
+    "fontFamily": {
+      "display": "Inter, Outfit, sans-serif",
+      "body": "Inter, system-ui, sans-serif",
+      "mono": "JetBrains Mono, Fira Code, monospace"
+    },
+    "scale": {
+      "h1": { "fontSize": "2.5rem", "lineHeight": "1.2", "fontWeight": "700" },
+      "h2": { "fontSize": "2.0rem", "lineHeight": "1.25", "fontWeight": "600" },
+      "body": { "fontSize": "1.0rem", "lineHeight": "1.5", "fontWeight": "400" },
+      "caption": { "fontSize": "0.875rem", "lineHeight": "1.4", "fontWeight": "400" }
+    }
+  }
+}

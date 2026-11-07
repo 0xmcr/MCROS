@@ -3,27 +3,31 @@ name: mcr-database-architect
 description: Design normalized relational schemas, document models, high-performance indexes, constraints, and optimized data access layers.
 ---
 
-# MCR Database Architect Skill
+# MCR Enterprise Database Architect Skill
 
-Use this skill when designing database schemas, modeling business entities, planning indexes, optimizing slow queries, or choosing between relational and document storage.
+Use this skill when designing database schemas, establishing relational integrity constraints, optimizing slow queries, and planning index strategies.
 
-## Data Modeling Principles
+## Supporting Resources & Submodules
+- Query & Index Diagnostic Script: [analyze_queries.sql](./scripts/analyze_queries.sql)
+- Production 3NF Reference Schema: [ecommerce-schema.sql](./examples/ecommerce-schema.sql)
+- Exhaustive Indexing Manual: [indexing-deep-dive.md](./references/indexing-deep-dive.md)
 
-### 1. Relational Integrity (PostgreSQL, MySQL, SQLite)
-- Normalize to Third Normal Form (3NF) to eliminate update anomalies.
-- Enforce data integrity via database constraints:
-  - `PRIMARY KEY`, `FOREIGN KEY (ON DELETE CASCADE / SET NULL / RESTRICT)`
-  - `NOT NULL` guarantees on mandatory attributes
-  - `UNIQUE` constraints on natural identifiers (emails, slugs, usernames)
-  - `CHECK` constraints on numerical ranges or enum-like states
-- Timestamps: Always include `created_at TIMESTAMPTZ DEFAULT NOW()` and `updated_at TIMESTAMPTZ DEFAULT NOW()`.
+---
 
-### 2. High-Performance Indexing Strategy
-- Index foreign key columns used in `JOIN` clauses.
-- Add composite indexes for queries filtering on multiple columns (`WHERE tenant_id = ? AND status = ? ORDER BY created_at DESC`).
-- Use Partial Indexes (e.g. `CREATE INDEX ON orders (status) WHERE status = 'PENDING'`) to minimize index bloat.
-- Prevent table scans by auditing queries with `EXPLAIN (ANALYZE, BUFFERS)`.
+## 1. Schema Design Protocol
 
-### 3. Connection Management & Pooling
-- Utilize PgBouncer or connection poolers to prevent socket exhaustion.
-- Enforce strict query timeouts (e.g. 5 seconds) to prevent unindexed queries from hanging database threads.
+### Step 1: Relational Normalization (3NF)
+- Eliminate update anomalies by normalizing entities (Users, Products, Orders, Order Items). See [ecommerce-schema.sql](./examples/ecommerce-schema.sql).
+- Enforce business guarantees at the database engine level via `CHECK`, `UNIQUE`, and `NOT NULL` constraints.
+- Foreign Keys: Always define explicit `ON DELETE` behavior (`CASCADE`, `RESTRICT`, or `SET NULL`).
+
+### Step 2: High-Performance Indexing Strategy
+- Consult [indexing-deep-dive.md](./references/indexing-deep-dive.md) before creating indexes.
+- Always index foreign key columns to eliminate table lock escalations on deletions.
+- Utilize Composite Indexes following the `Equality -> Inequality -> Sort` rule.
+- Implement Partial Indexes on high-cardinality status filters (`WHERE status = 'PENDING'`).
+
+### Step 3: Performance Diagnostics & Maintenance
+- Execute `./scripts/analyze_queries.sql` to identify slow queries and unused indexes.
+- Audit execution plans with `EXPLAIN (ANALYZE, BUFFERS)`.
+- Enforce strict client query timeouts (e.g. 5000ms) to prevent thread exhaustion.

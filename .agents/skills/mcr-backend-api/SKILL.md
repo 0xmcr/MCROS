@@ -3,40 +3,48 @@ name: mcr-backend-api
 description: Design and implement enterprise REST, GraphQL, or gRPC APIs with strict schema validation, consistent error models, rate limiting, and pagination.
 ---
 
-# MCR Backend API Engineering Skill
+# MCR Enterprise Backend API Engineering Skill
 
-Use this skill when building backend services, designing RESTful or RPC endpoints, implementing input validation, or establishing robust error handling.
+Use this skill when architecting, implementing, or auditing backend services, API controllers, input validation layers, and serialization pipelines.
 
-## API Architecture Principles
+## Supporting Resources & Submodules
+- Executable Validator: [validate_api.py](./scripts/validate_api.py)
+- Reference Implementation: [express-clean-api.ts](./examples/express-clean-api.ts)
+- Comprehensive Standards: [api-guidelines.md](./references/api-guidelines.md)
 
-### 1. Schema Validation at Perimeter
-- Validate 100% of incoming payloads (body, query params, headers) using schema validators (Zod, Pydantic, Joi).
-- Reject extraneous or malformed fields early before hitting service layers or database queries.
+---
 
-### 2. Standardized Response & Error Envelope
-- Success Response:
-  ```json
-  {
-    "success": true,
-    "data": { ... },
-    "meta": { "page": 1, "limit": 20, "total": 140 }
-  }
-  ```
-- Error Response:
-  ```json
-  {
-    "success": false,
-    "error": {
-      "code": "VALIDATION_FAILED",
-      "message": "Human-readable explanation of error.",
-      "details": [{ "field": "email", "issue": "Invalid email address format" }],
-      "requestId": "req_abc123"
-    }
-  }
-  ```
+## 1. Architectural Principles & Invariants
 
-### 3. API Hygiene & Resilience
-- Rate Limiting: Protect all public and authenticated endpoints with token bucket / sliding window limits (Redis-backed).
-- Pagination: Enforce cursor-based or limit-offset pagination on all collection endpoints (default limit: 20, max limit: 100).
-- Idempotency: Support `Idempotency-Key` headers for financial, checkout, or state-mutating POST requests.
-- Versioning: Prefix routes with API versioning (`/api/v1/resource`).
+1. **Zero Trust at Perimeter**: Every inbound parameter (Body, Query, Path, Header) must pass through a strict type-checked schema validator (Zod in TypeScript, Pydantic in Python) before reaching business services.
+2. **Deterministic Response Envelopes**: Every API response must adhere to a predictable wrapper containing `success: true/false`, `data` or `error`, and `meta.requestId` for correlation.
+3. **No Leaked Stack Traces**: Production error responses must never expose internal database queries, file paths, or language stack traces to clients.
+4. **Resilient Rate Limiting**: All public and authenticated endpoints must be bounded by sliding-window or token-bucket rate limiters.
+
+---
+
+## 2. Step-by-Step Implementation Workflow
+
+### Step 1: Define Strongly Typed Contracts
+Before writing database queries or controllers:
+- Define request DTOs using strict schemas. See [express-clean-api.ts](./examples/express-clean-api.ts).
+- Define output response interfaces.
+- Specify HTTP status codes and error taxonomies using [api-guidelines.md](./references/api-guidelines.md).
+
+### Step 2: Implement Input Validation & Sanitization
+- Ingest untrusted payloads and parse with `.safeParse()`.
+- Reject unrecognized fields to prevent mass-assignment vulnerabilities.
+- Format granular validation error messages indicating field name and specific constraint violated.
+
+### Step 3: Implement Business Logic & Idempotency
+- For state-mutating requests (`POST /api/v1/orders`), extract `Idempotency-Key` headers.
+- Coordinate with database transaction boundaries (`BEGIN ... COMMIT`).
+- Enforce business invariants in application service layers.
+
+### Step 4: Verification & Automated Testing
+- Validate output schema envelopes using `./scripts/validate_api.py`.
+- Write automated integration tests verifying status codes:
+  - Valid payload -> `200 OK` or `201 Created`
+  - Missing field -> `400 Bad Request` with structured details
+  - Unauthorized token -> `401 Unauthorized`
+  - Unprivileged caller -> `403 Forbidden`

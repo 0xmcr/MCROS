@@ -5,20 +5,31 @@ description: Perform a comprehensive, authorized defensive security audit of cod
 
 # MCR Defensive Security Audit Skill
 
-Use this skill when auditing a codebase for vulnerabilities, reviewing secrets management, inspecting OWASP Top 10 risks, or preparing a security assessment.
+Use this skill when auditing a codebase for vulnerabilities, reviewing secrets management, inspecting OWASP Top 10 risks, or preparing a security assessment report.
 
-## Protocol
+## Supporting Resources & Submodules
+- Secrets Scanner Script: [scan_secrets.sh](./scripts/scan_secrets.sh)
+- Defensive Headers Middleware: [secure-headers.ts](./examples/secure-headers.ts)
+- Comprehensive Threat Runbook: [owasp-top-10-runbook.md](./references/owasp-top-10-runbook.md)
 
-1. Scope Validation: Ensure analysis is defensive and restricted strictly to workspace code and configurations.
-2. Static Code Analysis (SAST):
-   - Trace untrusted inputs to sinks (SQL queries, system commands, DOM manipulation).
-   - Verify authentication and authorization checks on all routes.
-   - Inspect CORS, Content-Security-Policy, and cookie security flags.
-3. Dependency Vulnerability Audit (SCA):
-   - Check package manifests and lockfiles for known CVEs.
-   - Run dependency audit tools (`npm audit`, `pip-audit`, `cargo audit`) when installed.
-4. Secrets Hygiene:
-   - Check for hardcoded API keys, bearer tokens, private keys, or passwords.
-   - Confirm only sample `.env.example` templates exist with dummy values.
-5. Report Generation:
-   - File all findings in `docs/SECURITY_REPORT.md` using the standard format.
+---
+
+## 1. Defensive Audit Protocol
+
+### Step 1: Automated Secrets Hygiene Scan
+- Execute `./scripts/scan_secrets.sh`.
+- Confirm zero exposed AWS tokens, private keys, database passwords, or personal access tokens exist in tracked files.
+
+### Step 2: Code Review against OWASP Top 10
+- Consult [owasp-top-10-runbook.md](./references/owasp-top-10-runbook.md).
+- Verify all database queries use parameterized inputs.
+- Inspect route handlers for Broken Object Level Authorization (BOLA/IDOR).
+- Audit authentication cookie flags (`HttpOnly`, `Secure`, `SameSite`).
+
+### Step 3: Security Headers & CORS Inspection
+- Compare HTTP response headers against [secure-headers.ts](./examples/secure-headers.ts).
+- Verify Content-Security-Policy (CSP) and HSTS enforcement.
+- Ensure CORS configurations do not wildcard (`Access-Control-Allow-Origin: *`) on routes returning private user data.
+
+### Step 4: Documentation & Reporting
+- File all concrete findings into `docs/SECURITY_REPORT.md` including ID, Severity, Affected Component, Evidence, Impact, and verified Remediation steps.
