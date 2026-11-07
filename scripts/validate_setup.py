@@ -11,7 +11,6 @@ import sys
 ROOT = Path(__file__).resolve().parents[1]
 REQUIRED = [
     "AGENTS.md",
-    "README.md",
     ".agents/rules/00-core-operating-contract.md",
     ".agents/workflows/01-idea-to-product.md",
     ".agents/skills/project-discovery/SKILL.md",

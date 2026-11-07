@@ -49,12 +49,17 @@ if (command === "init") {
     ".cursorrules",
     ".gitignore",
     "docs",
-    "scripts"
+    "scripts",
+    "README.md"
   ];
 
   for (const item of itemsToCopy) {
     const srcPath = path.join(ROOT, item);
     const destPath = path.join(TARGET, item);
+    if (item === "README.md" && fs.existsSync(destPath)) {
+      // Don't overwrite existing user README
+      continue;
+    }
     if (fs.existsSync(srcPath)) {
       console.log(`- Installing ${item}...`);
       copyRecursive(srcPath, destPath);
