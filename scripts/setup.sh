@@ -17,7 +17,7 @@ echo "   /  |/  / ____/ __ \/ __ \/ ___/"
 echo "  / /|_/ / /   / /_/ / / / /\__ \ "
 echo " / /  / / /___/ _, _/ /_/ /___/ / "
 echo "/_/  /_/\____/_/ |_|\____//____/  "
-echo "  FRONTIER AI OS V3 — by Maheshwar Chandra Roy (MCR)"
+echo "  MCROS V3 — by Maheshwar Chandra Roy (MCR)"
 echo "=========================================================================="
 echo -e "${NC}"
 

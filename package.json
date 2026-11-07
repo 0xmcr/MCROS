@@ -1,0 +1,46 @@
+{
+  "name": "mcros",
+  "version": "3.2.0",
+  "description": "MCROS (Maheshwar Chandra Roy Operating System) — Autonomous AI Engineering, Research & Production OS",
+  "main": "bin/mcros.js",
+  "bin": {
+    "mcros": "bin/mcros.js"
+  },
+  "scripts": {
+    "validate": "python3 scripts/validate_setup.py",
+    "setup": "bash scripts/setup.sh",
+    "test": "python3 scripts/validate_setup.py"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/maheshwarchandraroy/MCROS.git"
+  },
+  "keywords": [
+    "mcros",
+    "ai-agent",
+    "antigravity",
+    "claude-code",
+    "cursorrules",
+    "autonomous-engineering",
+    "multi-agent",
+    "full-stack"
+  ],
+  "author": "Maheshwar Chandra Roy (MCR)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/maheshwarchandraroy/MCROS/issues"
+  },
+  "homepage": "https://github.com/maheshwarchandraroy/MCROS#readme",
+  "files": [
+    "bin",
+    ".agents",
+    "AGENTS.md",
+    "CLAUDE.md",
+    ".cursorrules",
+    "docs",
+    "scripts",
+    "assets",
+    "README.md",
+    "LICENSE"
+  ]
+}

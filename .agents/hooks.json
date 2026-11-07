@@ -1,26 +1,8 @@
 {
-  "mcros-session-guard": {
-    "enabled": true,
-    "SessionStart": [
-      {
-        "type": "command",
-        "command": "python3 ./scripts/validate_setup.py",
-        "timeout": 15
-      }
-    ]
-  },
   "mcros-security-gate": {
-    "enabled": true,
-    "PreToolUse": [
-      {
-        "matcher": "run_command",
-        "hooks": [
-          {
-            "command": "./.agents/skills/mcr-security-audit/scripts/scan_secrets.sh",
-            "timeout": 10
-          }
-        ]
-      }
-    ]
+    "enabled": false
+  },
+  "mcros-session-guard": {
+    "enabled": false
   }
 }

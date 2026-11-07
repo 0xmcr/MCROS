@@ -1,4 +1,4 @@
-# MCROS — FRONTIER AI OS V3
+# MCROS V3 — Maheshwar Chandra Roy Operating System
 ### Autonomous AI Engineering, Research & Production Operating System
 **Created by Maheshwar Chandra Roy (MCR)**
 
@@ -50,7 +50,7 @@ flowchart TD
 
 ---
 
-## ⚡ The 36 Master Skills Catalog
+## ⚡ The 43 Master Skills Catalog
 
 Invoke any skill directly via slash command (`/<skill-name>`) in your AI chat:
 
@@ -85,18 +85,26 @@ Invoke any skill directly via slash command (`/<skill-name>`) in your AI chat:
 | **Web3** | `mcr-web3-blockchain` | `/mcr-web3-blockchain` | Solidity smart contracts, ERC standards, Foundry fuzzing |
 | **Git & Cloud Hosting** | `mcr-cloud-hosting-domains` | `/mcr-cloud-hosting-domains` | Wholesale domain purchase, Cloudflare DNS/SSL, cloud hosting |
 | | `mcr-git-workflow-github` | `/mcr-git-workflow-github` | Git feature branches, atomic commits, remote push & GitHub PRs |
+| **Payments & Billing** | `mcr-payments-billing` | `/mcr-payments-billing` | Stripe, Lemon Squeezy, webhook signatures, subscription lifecycle |
+| **Email & OTP Auth** | `mcr-email-otp-notifications` | `/mcr-email-otp-notifications` | Resend/SendGrid transactional emails, 6-digit OTP, SPF/DKIM |
+| **Multi-Tenant SaaS** | `mcr-multitenant-saas` | `/mcr-multitenant-saas` | Multi-tenant workspaces, team invites, PostgreSQL RLS isolation |
+| **SEO & Social Cards** | `mcr-seo-meta-social` | `/mcr-seo-meta-social` | OpenGraph preview cards, Schema.org JSON-LD, dynamic sitemaps |
+| **Queues & Workers** | `mcr-background-jobs-queues` | `/mcr-background-jobs-queues` | BullMQ/Celery async workers, exponential backoff, DLQ queues |
+| **Storage & CDN** | `mcr-file-storage-cdn` | `/mcr-file-storage-cdn` | Cloudflare R2 / S3 presigned upload URLs, direct streaming |
+| **Observability** | `mcr-observability-sentry-logging` | `/mcr-observability-sentry-logging` | Structured JSON logging with correlation IDs, Sentry tracking |
 | **DevOps & Cloud** | `mcr-devops-cloud` | `/mcr-devops-cloud` | Docker containerization, GitHub Actions CI/CD pipelines |
 | | `mcr-release-readiness` | `/mcr-release-readiness` | Production verification gate & rollback safety check |
 | | `mcr-tech-docs` | `/mcr-tech-docs` | OpenAPI/Swagger specs, developer guides & changelogs |
 
 ---
 
-## 📜 The 12 System Rules
+## 📜 The 14 System Rules
 
 Rules operate in the background and govern model discipline:
 
 1. **`00-core-operating-contract.md`** (`always_on`): Truth over confidence, non-destructive safety, execution loop.
-2. **`15-clean-code-and-documentation.md`** (`always_on`): Professional JSDoc/TSDoc/Docstrings, clean code & logic documentation.
+2. **`05-godmode-execution-protocol.md`** (`always_on`): /GODMODE autonomous protocol: zero placeholders, enterprise-scale by default.
+3. **`15-clean-code-and-documentation.md`** (`always_on`): Professional JSDoc/TSDoc/Docstrings, clean code & logic documentation.
 2. **`10-research-and-market-intel.md`** (`model_decision`): Verified evidence standards.
 3. **`20-product-and-architecture.md`** (`model_decision`): PRD and system architecture standards.
 4. **`30-frontend-engineering.md`** (`glob`): Full component visual state handling.

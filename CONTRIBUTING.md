@@ -1,4 +1,4 @@
-# Contributing to MCROS (FRONTIER AI OS V3)
+# Contributing to MCROS (Maheshwar Chandra Roy Operating System)
 
 Thank you for your interest in contributing to **MCROS**, created by **Maheshwar Chandra Roy (MCR)**.
 

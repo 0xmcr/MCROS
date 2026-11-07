@@ -3,7 +3,7 @@
 Use these as user prompts in Antigravity. Adapt the scope and constraints.
 
 ## A. Start a new product
-"Use the FRONTIER AI OS V3 workflow. First inspect this workspace and identify whether it is empty or an existing project. Ask only for decisions that materially affect the outcome. Research current technical options and market claims where needed, create/update the PRD and architecture docs, then implement the highest-priority approved scope. Run relevant tests and report evidence, limitations, and next steps. Do not deploy or incur costs without my approval."
+"Use the MCROS V3 workflow. First inspect this workspace and identify whether it is empty or an existing project. Ask only for decisions that materially affect the outcome. Research current technical options and market claims where needed, create/update the PRD and architecture docs, then implement the highest-priority approved scope. Run relevant tests and report evidence, limitations, and next steps. Do not deploy or incur costs without my approval."
 
 ## B. Improve an existing application
 "Inspect the existing codebase before changing anything. Map the architecture, identify the highest-impact defects and risks, and propose a small implementation plan. Then implement the agreed improvements without unrelated rewrites. Run targeted tests and regression checks. Summarize files changed and actual verification results."

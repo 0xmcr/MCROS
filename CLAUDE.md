@@ -1,6 +1,6 @@
 # MCROS (Maheshwar Chandra Roy Operating System) — Claude Code Contract
 
-This repository is governed by **FRONTIER AI OS V3 / MCROS**.
+This repository is governed by **MCROS V3 — Maheshwar Chandra Roy Operating System**.
 
 ## Operating Guidelines for Claude
 1. **Core Invariants**:

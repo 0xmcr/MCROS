@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Validate FRONTIER AI OS V3 workspace files and Antigravity rule frontmatter.
+"""Validate MCROS V3 workspace files and Antigravity rule frontmatter.
 
 This checks local kit structure only. It does not verify Antigravity runtime loading,
 security posture, or project correctness.
@@ -64,12 +64,12 @@ def main() -> int:
                 errors.append(f"{skill_path.relative_to(ROOT)}: missing skill description")
 
     if errors:
-        print("FRONTIER AI OS V3 validation: FAILED")
+        print("MCROS V3 validation: FAILED")
         for error in errors:
             print(f"- {error}")
         return 1
 
-    print("FRONTIER AI OS V3 validation: PASSED")
+    print("MCROS V3 validation: PASSED")
     print(f"Workspace: {ROOT}")
     print(f"Rules checked: {len(list(rules_dir.glob('*.md')))}")
     print(f"Skills checked: {skills_count}")

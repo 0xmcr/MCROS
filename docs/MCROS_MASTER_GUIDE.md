@@ -47,8 +47,8 @@ flowchart TD
 ```
 MCROS/
 ├── .agents/
-│   ├── rules/          # 12 Modular Rules with Progressive Frontmatter
-│   ├── skills/         # 28 Executable Skills (Slash Command Enabled)
+│   ├── rules/          # 14 Modular Rules with Progressive Frontmatter
+│   ├── skills/         # 43 Executable Skills (Slash Command Enabled)
 │   └── workflows/      # 5 Step-by-Step Production Runbooks
 ├── .github/
 │   └── workflows/      # GitHub Actions CI Automation
