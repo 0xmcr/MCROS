@@ -15,4 +15,4 @@ Examples of unacceptable behavior:
 - Publishing others' private information without explicit permission.
 
 ## Enforcement
-Instances of abusive, harassing, or otherwise unacceptable behavior may be reported to the community maintainer at support@mcros.dev.
+Instances of abusive, harassing, or otherwise unacceptable behavior may be reported to the community maintainer at maheshwarchandra.dev@gmail.com.
