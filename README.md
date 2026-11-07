@@ -50,7 +50,7 @@ flowchart TD
 
 ---
 
-## ⚡ The 33 Master Skills Catalog
+## ⚡ The 34 Master Skills Catalog
 
 Invoke any skill directly via slash command (`/<skill-name>`) in your AI chat:
 
@@ -74,7 +74,8 @@ Invoke any skill directly via slash command (`/<skill-name>`) in your AI chat:
 | **UX & Branding** | `mcr-brand-logo-design` | `/mcr-brand-logo-design` | Vector SVG logos, favicons, app icons, color palettes |
 | | `mcr-ux-interaction-design` | `/mcr-ux-interaction-design` | Click flows, toast notification system, modals & feedback loops |
 | | `mcr-motion-animation` | `/mcr-motion-animation` | High-performance 60fps animations, Framer Motion, transitions |
-| **Cross-Platform** | `mcr-crossplatform-mobile-desktop` | `/mcr-crossplatform-mobile-desktop` | Android, iOS, Windows, macOS, Linux native/hybrid apps |
+| **Cross-Platform & i18n** | `mcr-crossplatform-mobile-desktop` | `/mcr-crossplatform-mobile-desktop` | Android, iOS, Windows, macOS, Linux native/hybrid apps |
+| | `mcr-i18n-localization` | `/mcr-i18n-localization` | Multi-language catalogs (English, Bengali, RTL), locale formats |
 | **QA & Debugging** | `mcr-test-automation` | `/mcr-test-automation` | Vitest, Playwright, Pytest automated testing suites |
 | | `mcr-debugger-fixer` | `/mcr-debugger-fixer` | Error stack trace analysis & surgical root-cause repair |
 | **Quality & Memory**| `mcr-quality-gatekeeper` | `/mcr-quality-gatekeeper` | Anti-hallucination filter & lessons learned learning loop |
@@ -93,6 +94,7 @@ Invoke any skill directly via slash command (`/<skill-name>`) in your AI chat:
 Rules operate in the background and govern model discipline:
 
 1. **`00-core-operating-contract.md`** (`always_on`): Truth over confidence, non-destructive safety, execution loop.
+2. **`15-clean-code-and-documentation.md`** (`always_on`): Professional JSDoc/TSDoc/Docstrings, clean code & logic documentation.
 2. **`10-research-and-market-intel.md`** (`model_decision`): Verified evidence standards.
 3. **`20-product-and-architecture.md`** (`model_decision`): PRD and system architecture standards.
 4. **`30-frontend-engineering.md`** (`glob`): Full component visual state handling.
