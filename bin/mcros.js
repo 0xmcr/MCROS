@@ -19,7 +19,7 @@ console.log("\x1b[36m%s\x1b[0m", `
   / /|_/ / /   / /_/ / / / /\__ \\ 
  / /  / / /___/ _, _/ /_/ /___/ / 
 /_/  /_/\____/_/ |_|\____//____/  
-  MCROS V3 — by Maheshwar Chandra Roy (MCR)
+  MCROS V3 — by Maheshwar Chandra Roy (0xmcr)
 ==========================================================================
 `);
 
@@ -69,11 +69,22 @@ if (command === "init") {
   } catch (err) {
     process.exit(1);
   }
+} else if (command === "feedback") {
+  const issueUrl = "https://github.com/0xmcr/MCROS/issues/new/choose";
+  console.log("\x1b[32m%s\x1b[0m", "Opening MCROS Community Feedback & Issue Tracker:");
+  console.log(issueUrl);
+  try {
+    const openCmd = process.platform === "darwin" ? "open" : process.platform === "win32" ? "start" : "xdg-open";
+    execSync(`${openCmd} "${issueUrl}"`, { stdio: "ignore" });
+  } catch (_) {
+    // If browser open fails in headless env, URL is already printed above
+  }
 } else {
   console.log(`
 Usage:
   npx mcros init       Initialize MCROS inside the current workspace
   npx mcros validate   Run the static rules and skills verification suite
+  npx mcros feedback   Open GitHub issues to report bugs or submit feature requests
   npx mcros help       Display this manual
   `);
 }

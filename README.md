@@ -2,7 +2,7 @@
 ### Autonomous AI Engineering, Research & Production Operating System
 **Created by Maheshwar Chandra Roy (MCR)**
 
-[![CI Status](https://github.com/maheshwarchandraroy/MCROS/actions/workflows/ci.yml/badge.svg)](https://github.com/maheshwarchandraroy/MCROS/actions)
+[![CI Status](https://github.com/0xmcr/MCROS/actions/workflows/ci.yml/badge.svg)](https://github.com/0xmcr/MCROS/actions)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Platform: Antigravity](https://img.shields.io/badge/Platform-Google%20Antigravity-4285F4.svg)]()
 [![Platform: Claude Code](https://img.shields.io/badge/Platform-Anthropic%20Claude-D97706.svg)]()

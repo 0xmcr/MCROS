@@ -13,7 +13,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/maheshwarchandraroy/MCROS.git"
+    "url": "git+https://github.com/0xmcr/MCROS.git"
   },
   "keywords": [
     "mcros",
@@ -25,12 +25,12 @@
     "multi-agent",
     "full-stack"
   ],
-  "author": "Maheshwar Chandra Roy (MCR)",
+  "author": "Maheshwar Chandra Roy (0xmcr)",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/maheshwarchandraroy/MCROS/issues"
+    "url": "https://github.com/0xmcr/MCROS/issues"
   },
-  "homepage": "https://github.com/maheshwarchandraroy/MCROS#readme",
+  "homepage": "https://github.com/0xmcr/MCROS#readme",
   "files": [
     "bin",
     ".agents",
